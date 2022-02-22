@@ -1,11 +1,12 @@
 import {all} from 'redux-saga/effects';
 
 //sagas
-import users from './users';
+import products from './products';
+import categories from './categories';
 
 //export the root saga
 function* rootSaga() {
-  yield all([users()]);
+  yield all([products(), categories()]);
 }
 
 export default rootSaga;

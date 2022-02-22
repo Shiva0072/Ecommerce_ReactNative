@@ -6,6 +6,12 @@ import {Provider} from 'react-redux';
 
 import store from './redux/store';
 import Home from './screens/Home';
+import CartItem from './components/CartItem';
+import ProductItem from './components/ProductItem';
+
+import Products from './screens/Products.js';
+import Categories from './screens/Categories';
+import CategoryItem from './components/CategoryItem';
 
 const Stack = createNativeStackNavigator();
 
@@ -13,8 +19,13 @@ function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator initialRouteName="Category">
           <Stack.Screen name="Home" component={Home} />
+          {/* <Stack.Screen name="prac" component={CartItem} /> */}
+          {/* <Stack.Screen name="prac" component={ProductItem} /> */}
+          <Stack.Screen name="Products" component={Products} />
+          <Stack.Screen name="Category" component={Categories} />
+          {/* <Stack.Screen name="prac" component={CategoryItem} /> */}
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

@@ -1,6 +1,6 @@
 import actiontypes from '../actionTypes';
 
-export const fetchUser = data => {
+export const UserAdded = data => {
   return {
     type: actiontypes.FETCH_USER,
     payload: {
