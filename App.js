@@ -12,6 +12,8 @@ import ProductItem from './components/ProductItem';
 import Products from './screens/Products.js';
 import Categories from './screens/Categories';
 import CategoryItem from './components/CategoryItem';
+import ProductDetails from './screens/ProductDetails';
+import Cart from './screens/Cart';
 
 const Stack = createNativeStackNavigator();
 
@@ -23,8 +25,11 @@ function App() {
           <Stack.Screen name="Home" component={Home} />
           {/* <Stack.Screen name="prac" component={CartItem} /> */}
           {/* <Stack.Screen name="prac" component={ProductItem} /> */}
-          <Stack.Screen name="Products" component={Products} />
           <Stack.Screen name="Category" component={Categories} />
+          <Stack.Screen name="Products" component={Products} />
+          <Stack.Screen name="ProductDetails" component={ProductDetails} />
+          <Stack.Screen name="Cart" component={Cart} />
+
           {/* <Stack.Screen name="prac" component={CategoryItem} /> */}
         </Stack.Navigator>
       </NavigationContainer>

@@ -8,21 +8,10 @@ export const UserAdded = data => {
     },
   };
 };
-export const fetchUserSucess = data => {
-  //data=>users
-  return {
-    type: actiontypes.FETCH_USER_SUCCESS,
-    payload: {
-      data,
-    },
-  };
-};
-export const fetchUserFailure = data => {
-  //data=>error
-  return {
-    type: actiontypes.FETCH_USER_FAILURE,
-    payload: {
-      error: data,
-    },
-  };
-};
+
+export const productAddedToCart = data => ({
+  type: actiontypes.PRODUCT_ADDED_CART,
+  payload: {
+    data: data,
+  },
+});

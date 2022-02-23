@@ -1,4 +1,4 @@
-import {put, call, takeLatest} from 'redux-saga/effects';
+import {put, call, takeEvery} from 'redux-saga/effects';
 
 import getProducts from '../../services/productsApi';
 import actiontypes from '../actions/actionTypes';
@@ -21,7 +21,7 @@ function* fetchTheproducts({type, payload}) {
 
 //watcherSaga
 function* watchFetchProducts() {
-  yield takeLatest(actiontypes.PRODUCT_FETCH, fetchTheproducts);
+  yield takeEvery(actiontypes.PRODUCT_FETCH, fetchTheproducts);
 }
 
 export default watchFetchProducts;
