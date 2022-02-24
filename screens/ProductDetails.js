@@ -15,10 +15,8 @@ const ProductDetails = ({navigation, route}) => {
 
   const dispatch = useDispatch();
   const buyNow = () => {
-    console.log('Dispatching from buy now button\n');
     dispatch(productAddedToCart(product));
     navigation.push('Cart');
-    console.log('completed');
   };
 
   return (

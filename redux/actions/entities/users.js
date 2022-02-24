@@ -15,3 +15,17 @@ export const productAddedToCart = data => ({
     data: data,
   },
 });
+
+export const removeFromCart = id => ({
+  type: actiontypes.PRODUCT_DECREASE_CART,
+  payload: {
+    id: id,
+  },
+});
+
+export const deleteFromCart = id => ({
+  type: actiontypes.PRODUCT_REMOVED_CART,
+  payload: {
+    id: id,
+  },
+});

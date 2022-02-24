@@ -2,44 +2,54 @@ import {View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-const p = {
-  id: 1,
-  title: 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops',
-  price: 109.95,
-  description:
-    'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday',
-  category: "men's clothing",
-  image: 'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',
-  rating: {
-    rate: 3.9,
-    count: 120,
-  },
-};
-
-// const fet = async () => {
-//   try {
-//     const res = await (
-//       await fetch('https://fakestoreapi.com/products/category/jewelery')
-//     ).json();
-//     console.log(res);
-//   } catch (err) {}
-// };
-const CartItem = ({title, price, description, category, image}) => {
-  //   fet();
+Icon.loadFont();
+const CartItem = ({
+  id,
+  title,
+  price,
+  quantity,
+  image,
+  increase,
+  decrease,
+  remove,
+}) => {
+  console.log(title);
   return (
     <TouchableOpacity style={styles.itemWrapper}>
       <View style={styles.left}>
-        <Image source={{uri: p.image}} style={styles.img} />
+        <Image source={{uri: image}} style={styles.img} />
       </View>
       <View style={styles.right}>
-        <Text style={styles.title}>{p.title}</Text>
-        <Text style={styles.info}>quantity : {10}</Text>
-        <Text style={styles.info}>rate : {p.price}</Text>
-        <Text style={styles.info}>amount : {p.price * 10}</Text>
-        <View style={styles.actions}>
-          <Icon name="plussquare" size={30} color="black" />
-          <Icon name="minussquare" size={30} color="black" />
-          <Icon name="delete" size={30} color="black" />
+        <Text style={styles.title}>{title}</Text>
+        <Text style={styles.info}>quantity : {quantity}</Text>
+        <Text style={styles.info}>rate : ${price}</Text>
+        <Text style={[styles.info, {fontWeight: 'bold'}]}>
+          amount : ${price * quantity}
+        </Text>
+        <View style={styles.actionsWrapper}>
+          <View>
+            <Icon.Button
+              style={styles.actions}
+              name="plussquare"
+              size={30}
+              color="black"
+              onPress={() => increase(id)}
+            />
+          </View>
+          <Icon.Button
+            style={styles.actions}
+            name="minussquare"
+            size={30}
+            color="black"
+            onPress={() => decrease(id)}
+          />
+          <Icon.Button
+            style={styles.actions}
+            name="delete"
+            size={30}
+            color="black"
+            onPress={() => remove(id)}
+          />
         </View>
       </View>
     </TouchableOpacity>
@@ -81,10 +91,14 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     lineHeight: 25,
   },
-  actions: {
+  actionsWrapper: {
     flexDirection: 'row',
     justifyContent: 'flex-start',
     marginVertical: 10,
+  },
+  actions: {
+    margin: 2,
+    padding: 4,
   },
 });
 
