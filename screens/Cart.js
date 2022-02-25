@@ -12,7 +12,9 @@ import {
   productAddedToCart,
   removeFromCart,
   deleteFromCart,
+  userAdded,
 } from '../redux/actions/entities/users';
+import showNoty from '../services/notification.ios';
 
 const Cart = ({navigation, route}) => {
   const cart = useSelector(state => {
@@ -38,6 +40,11 @@ const Cart = ({navigation, route}) => {
     dispatch(deleteFromCart(id));
   };
 
+  const shopDone = () => {
+    showNoty();
+    navigation.popToTop('Home');
+  };
+
   return (
     <View>
       <ScrollView>
@@ -59,11 +66,11 @@ const Cart = ({navigation, route}) => {
               />
             );
           })}
+        <Text style={styles.info}>Total : ${total}</Text>
+        <TouchableOpacity style={styles.btn} onPress={() => shopDone()}>
+          <Text style={styles.info}>Place Order</Text>
+        </TouchableOpacity>
       </ScrollView>
-      <Text style={styles.info}>Total : ${total}</Text>
-      <TouchableOpacity style={styles.btn}>
-        <Text style={styles.info}>Place Order</Text>
-      </TouchableOpacity>
     </View>
   );
 };

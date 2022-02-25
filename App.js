@@ -21,16 +21,12 @@ function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Category">
+        <Stack.Navigator initialRouteName="Home">
           <Stack.Screen name="Home" component={Home} />
-          {/* <Stack.Screen name="prac" component={CartItem} /> */}
-          {/* <Stack.Screen name="prac" component={ProductItem} /> */}
           <Stack.Screen name="Category" component={Categories} />
           <Stack.Screen name="Products" component={Products} />
           <Stack.Screen name="ProductDetails" component={ProductDetails} />
           <Stack.Screen name="Cart" component={Cart} />
-
-          {/* <Stack.Screen name="prac" component={CategoryItem} /> */}
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

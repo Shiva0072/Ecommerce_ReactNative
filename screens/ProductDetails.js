@@ -1,4 +1,4 @@
-import {View, Text} from 'react-native';
+import {View, Text, ScrollView} from 'react-native';
 import React from 'react';
 import ProductDetailsComponent from '../components/ProductDetails';
 import {productAddedToCart} from '../redux/actions/entities/users';
@@ -20,9 +20,9 @@ const ProductDetails = ({navigation, route}) => {
   };
 
   return (
-    <View>
+    <ScrollView>
       <ProductDetailsComponent product={product} buyNow={buyNow} />
-    </View>
+    </ScrollView>
   );
 };
 

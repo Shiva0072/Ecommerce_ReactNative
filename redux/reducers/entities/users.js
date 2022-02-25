@@ -13,8 +13,8 @@ export default users = (state = initialState, {type, payload}) => {
         ...state,
         name: payload.name,
         email: payload.email,
+        cart: new Map(),
       };
-
     case actiontypes.PRODUCT_ADDED_CART: {
       const id = payload.data.id ? payload.data.id : payload.data;
       let cart = state.cart;

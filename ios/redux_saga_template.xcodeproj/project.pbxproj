@@ -37,6 +37,7 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = redux_saga_template/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = redux_saga_template/main.m; sourceTree = "<group>"; };
 		2FFB40031BF83CD8AFAD522B /* libPods-redux_saga_template.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-redux_saga_template.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40867D5D27C79C1900A07B47 /* redux_saga_template.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = redux_saga_template.entitlements; path = redux_saga_template/redux_saga_template.entitlements; sourceTree = "<group>"; };
 		601417756D597E57EEE72827 /* Pods-redux_saga_template-redux_saga_templateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-redux_saga_template-redux_saga_templateTests.release.xcconfig"; path = "Target Support Files/Pods-redux_saga_template-redux_saga_templateTests/Pods-redux_saga_template-redux_saga_templateTests.release.xcconfig"; sourceTree = "<group>"; };
 		801FB3C8A7480E3F98B2FD26 /* libPods-redux_saga_template-redux_saga_templateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-redux_saga_template-redux_saga_templateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = redux_saga_template/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 		13B07FAE1A68108700A75B9A /* redux_saga_template */ = {
 			isa = PBXGroup;
 			children = (
+				40867D5D27C79C1900A07B47 /* redux_saga_template.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -143,7 +145,6 @@
 			children = (
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		F44B4F328484052A1DBE5D4B /* Pods */ = {
@@ -154,7 +155,6 @@
 				C492FA419F673A2456DEF8AA /* Pods-redux_saga_template-redux_saga_templateTests.debug.xcconfig */,
 				601417756D597E57EEE72827 /* Pods-redux_saga_template-redux_saga_templateTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -493,6 +493,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = redux_saga_template/redux_saga_template.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = redux_saga_template/Info.plist;
@@ -519,6 +520,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = redux_saga_template/redux_saga_template.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = redux_saga_template/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

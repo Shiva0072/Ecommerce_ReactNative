@@ -5,6 +5,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {categoryFetch} from '../redux/actions/entities/category';
 import images from '../assets/data/images';
 import CategoryItem from '../components/CategoryItem';
+import {userAdded} from '../redux/actions/entities/users';
 
 const Categories = ({navigation, route}) => {
   const categoriesDATA = useSelector(
@@ -15,6 +16,7 @@ const Categories = ({navigation, route}) => {
 
   const dispatch = useDispatch();
   useEffect(() => {
+    dispatch(userAdded(route.params));
     dispatch(categoryFetch());
   }, []);
 

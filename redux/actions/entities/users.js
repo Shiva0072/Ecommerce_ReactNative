@@ -1,10 +1,10 @@
 import actiontypes from '../actionTypes';
 
-export const UserAdded = data => {
+export const userAdded = data => {
   return {
-    type: actiontypes.FETCH_USER,
+    type: actiontypes.USER_ADDED,
     payload: {
-      data,
+      ...data,
     },
   };
 };
