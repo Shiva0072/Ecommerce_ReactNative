@@ -8,3 +8,14 @@ A small shopping app:
 5. Clicking on any product should open a product detail page where you need to show product image and product name and price and a buy now button.
 6. Clicking on the buy now button should take to the cart page. You should be able to add multiple products to the cart and you can store the cart list locally. You need to show the total amount of cart and list of cart items. Each item in the list should show the image name and price.
 7. Clicking on the place order button should remove local cart items and should display a notification of the success order.
+
+
+-
+***To Run***
+
+1. Git clone repo
+2. npm i
+3. cd ./ios && pod install
+4. cd .. [outside the os folder.]
+5. npm start
+6. In new terminal: npx react-native run-ios/run-android
